@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+     *{
+         margin: 0;
+         padding: 0;
+     }
+      body{
+          background-color: black;
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100vh;
+          max-width: 100%;
+      }
+      .fly-in{
+          list-style: none;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+      }
+      .fly-in li{
+          display: inline-block;
+          color: rgb(229, 235, 241);
+          margin-right: 50px;
+          font-family: cursive;
+          font-weight: 400px;
+          font-size: 4em;
+          opacity: 1;
+          transition: all 2.5s ease;
+      }
+
+      .fly-in li:last-child{
+          margin-right: 0;
+      }
+      .fly-in.hidden li{
+          opacity: 0;
+      }
+
+    .fly-in.hidden li:nth-child(1){transform: translateX(-200px) translateY(-200px);
+    }
+    .fly-in.hidden li:nth-child(2){transform: translateX(20px) translateY(100px);
+    }
+    .fly-in.hidden li:nth-child(3){transform: translateX(-150px) translateY(-80px);
+    }
+    .fly-in.hidden li:nth-child(4){transform: translateX(-150px) translateY(-200px);
+    }
+    .fly-in.hidden li:nth-child(5){transform: translateX(-300px) translateY(200px);
+    }
+    .fly-in.hidden li:nth-child(6){transform: translateX(20px) translateY(-20px);
+    }
+    .fly-in.hidden li:nth-child(7){transform: translateX(-30px) translateY(200px);
+    }
+
+    @media only screen and (max-width: 960){
+    .container {width:100%};
+}
+
+@media only screen and (max-width: 767px){
+    .fly-in li{
+        font-size: 1.6em;
+        display: inline-block;
+        text-align: center;
+}
+
+
+
+}
+    </style>
+</head>
+<body>
+    <ul class="fly-in hidden">
+        <li>B</li>
+        <li>O</li>
+        <li>S</li>
+        <li>W</li>
+        <li>E</li>
+        <li>L</li>
+        <li>L</li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+        setTimeout(function() {
+            $(".fly-in").removeClass('hidden')
+        }, 1000);   
+     })();
+    </script>
+</body>
+</html>
+
