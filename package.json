@@ -1,0 +1,23 @@
+{
+  "name": "index1",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy":"gh-pages -d css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doujones/Portfolio1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doujones/Portfolio1/issues"
+  },
+  "homepage": "https://doujones.github.io/github3",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
